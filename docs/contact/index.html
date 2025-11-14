@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | LOU-Ark Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* A little bit of custom CSS for the active nav link underline */
+        .nav-link-active {
+            position: relative;
+        }
+        .nav-link-active::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #1a1a1a;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-dark': '#1a1a1a',
+                        'brand-light': '#f0f0f0',
+                        'brand-gray': '#cccccc',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans JP', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-light text-brand-dark font-sans antialiased">
+
+    <!-- Header -->
+    <header class="bg-brand-light/80 backdrop-blur-md sticky top-0 z-50 border-b border-brand-gray/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="../index.html" class="text-2xl font-bold text-brand-dark tracking-wider">LOU-Ark</a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex md:space-x-8">
+                    <a href="../index.html" class="text-gray-600 hover:text-brand-dark transition-colors duration-300">Home</a>
+                    <a href="../about/index.html" class="text-gray-600 hover:text-brand-dark transition-colors duration-300">About</a>
+                    <a href="../expertise/index.html" class="text-gray-600 hover:text-brand-dark transition-colors duration-300">Expertise</a>
+                    <a href="../projects/index.html" class="text-gray-600 hover:text-brand-dark transition-colors duration-300">Projects</a>
+                    <a href="../insights/index.html" class="text-gray-600 hover:text-brand-dark transition-colors duration-300">Insights</a>
+                    <a href="../philosophy/index.html" class="text-gray-600 hover:text-brand-dark transition-colors duration-300">Philosophy</a>
+                    <a href="#" class="text-brand-dark font-semibold nav-link-active">Contact</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-brand-dark hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand-dark">
+                        <span class="sr-only">Open main menu</span>
+                        <svg id="menu-open-icon" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                        <svg id="menu-close-icon" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="../index.html" class="text-gray-600 hover:bg-gray-200 hover:text-brand-dark block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="../about/index.html" class="text-gray-600 hover:bg-gray-200 hover:text-brand-dark block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="../expertise/index.html" class="text-gray-600 hover:bg-gray-200 hover:text-brand-dark block px-3 py-2 rounded-md text-base font-medium">Expertise</a>
+                <a href="../projects/index.html" class="text-gray-600 hover:bg-gray-200 hover:text-brand-dark block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+                <a href="../insights/index.html" class="text-gray-600 hover:bg-gray-200 hover:text-brand-dark block px-3 py-2 rounded-md text-base font-medium">Insights</a>
+                <a href="../philosophy/index.html" class="text-gray-600 hover:bg-gray-200 hover:text-brand-dark block px-3 py-2 rounded-md text-base font-medium">Philosophy</a>
+                <a href="#" class="bg-gray-200 text-brand-dark block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+            <!-- Page Header -->
+            <div class="text-center mb-16">
+                <p class="text-sm font-semibold text-gray-500 uppercase tracking-wider">Get in Touch</p>
+                <h1 class="mt-2 text-4xl font-bold text-brand-dark sm:text-5xl tracking-tight">本質を追求する共鳴を求めて</h1>
+                <p class="mt-6 max-w-3xl mx-auto text-lg leading-8 text-gray-600">
+                    私の探求と思索にご関心をお寄せいただき、ありがとうございます。ミニマリズム、ウェルネス、そして深い体験の追求という旅路を共に歩むパートナー、あるいは新たな視点を求める企業様との出会いを心より楽しみにしております。採用、協業、講演、取材など、様々な形での共創の可能性について、お気軽にご連絡ください。
+                </p>
+            </div>
+
+            <!-- Inquiry Types Section -->
+            <div class="mb-20">
+                <h2 class="text-2xl font-bold text-center text-brand-dark mb-10 sm:text-3xl">ご相談の種別</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Collaboration & Projects -->
+                    <div class="bg-white p-8 rounded-lg border border-gray-200 shadow-sm transition hover:shadow-md">
+                        <div class="flex items-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-dark mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.354a1.76 1.76 0 01.592-1.988l5.5-3.928a1.76 1.76 0 012.824 0l5.5 3.928a1.76 1.76 0 01.592 1.988l-2.147 6.354A1.76 1.76 0 0113 19.24V5.882" /></svg>
+                            <h3 class="text-xl font-semibold text-brand-dark">協業・プロジェクトのご相談</h3>
+                        </div>
+                        <p class="text-gray-600">本質的な価値創造を目指すプロジェクト、ライフスタイルやワークフローの最適化、ウェルネスプログラム開発など、私の専門性が貢献できる領域での協業をご提案ください。</p>
+                    </div>
+
+                    <!-- Recruitment & Career -->
+                    <div class="bg-white p-8 rounded-lg border border-gray-200 shadow-sm transition hover:shadow-md">
+                        <div class="flex items-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-dark mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                            <h3 class="text-xl font-semibold text-brand-dark">採用・キャリアに関するお問い合わせ</h3>
+                        </div>
+                        <p class="text-gray-600">私の哲学やスキルセットが貴社のビジョンと共鳴するとお考えの採用担当者様からのご連絡をお待ちしております。未来を共創する機会についてお話ししましょう。</p>
+                    </div>
+
+                    <!-- Speaking & Writing -->
+                    <div class="bg-white p-8 rounded-lg border border-gray-200 shadow-sm transition hover:shadow-md">
+                        <div class="flex items-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-dark mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
+                            <h3 class="text-xl font-semibold text-brand-dark">講演・執筆のご依頼</h3>
+                        </div>
+                        <p class="text-gray-600">ミニマリズム、心身のウェルネス、デジタル活用術、サブカルチャーを通じた現代社会の洞察など、私の探求するテーマに関する講演やメディアへの寄稿をご検討ください。</p>
+                    </div>
+
+                    <!-- Media & Interviews -->
+                    <div class="bg-white p-8 rounded-lg border border-gray-200 shadow-sm transition hover:shadow-md">
+                        <div class="flex items-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-dark mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" /></svg>
+                            <h3 class="text-xl font-semibold text-brand-dark">取材・インタビューのご依頼</h3>
+                        </div>
+                        <p class="text-gray-600">私のライフスタイルや哲学、活動内容についてご興味をお持ちのメディア関係者様からのご連絡をお待ちしております。本質的な豊かさについて共に探求しましょう。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form Section -->
+            <div class="bg-white border border-gray-200 rounded-lg p-8 sm:p-12">
+                <h2 class="text-2xl font-bold text-brand-dark mb-2 sm:text-3xl">お問い合わせフォーム</h2>
+                <p class="text-gray-600 mb-8">以下のフォームに必要事項をご記入の上、送信してください。通常2〜3営業日以内にご返信いたします。</p>
+
+                <form action="#" method="POST" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">お名前<span class="text-red-500">*</span></label>
+                            <div class="mt-1">
+                                <input type="text" name="name" id="name" autocomplete="name" required class="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-brand-dark focus:border-brand-dark sm:text-sm">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">メールアドレス<span class="text-red-500">*</span></label>
+                            <div class="mt-1">
+                                <input id="email" name="email" type="email" autocomplete="email" required class="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-brand-dark focus:border-brand-dark sm:text-sm">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="inquiry_type" class="block text-sm font-medium text-gray-700">お問い合わせ種別<span class="text-red-500">*</span></label>
+                        <div class="mt-1">
+                            <select id="inquiry_type" name="inquiry_type" required class="block w-full px-3 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-brand-dark focus:border-brand-dark sm:text-sm">
+                                <option>選択してください</option>
+                                <option>協業・プロジェクトのご相談</option>
+                                <option>採用・キャリアに関するお問い合わせ</option>
+                                <option>講演・執筆のご依頼</option>
+                                <option>取材・インタビューのご依頼</option>
+                                <option>その他</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="subject" class="block text-sm font-medium text-gray-700">件名</label>
+                        <div class="mt-1">
+                            <input type="text" name="subject" id="subject" class="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-brand-dark focus:border-brand-dark sm:text-sm">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700">お問い合わせ内容<span class="text-red-500">*</span></label>
+                        <div class="mt-1">
+                            <textarea id="message" name="message" rows="6" required class="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-brand-dark focus:border-brand-dark sm:text-sm"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="flex items-center h-5">
+                            <input id="privacy-policy" name="privacy-policy" type="checkbox" required class="focus:ring-brand-dark h-4 w-4 text-brand-dark border-gray-300 rounded">
+                        </div>
+                        <div class="ml-3 text-sm">
+                            <label for="privacy-policy" class="font-medium text-gray-700">
+                                <a href="../legal/privacy-policy/index.html" class="underline hover:text-brand-dark" target="_blank">プライバシーポリシー</a>に同意します。<span class="text-red-500">*</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-brand-dark hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-dark transition-colors duration-300">
+                            送信する
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+                <div class="space-y-8 xl:col-span-1">
+                    <a href="../index.html" class="text-2xl font-bold text-brand-dark tracking-wider">LOU-Ark</a>
+                    <p class="text-gray-500 text-base">本質を極めるミニマリスト・ウェルネス：心身の調和と深い体験の追求。</p>
+                </div>
+                <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-semibold text-gray-500 tracking-wider uppercase">Navigation</h3>
+                            <ul role="list" class="mt-4 space-y-4">
+                                <li><a href="../about/index.html" class="text-base text-gray-500 hover:text-brand-dark">About</a></li>
+                                <li><a href="../expertise/index.html" class="text-base text-gray-500 hover:text-brand-dark">Expertise</a></li>
+                                <li><a href="../projects/index.html" class="text-base text-gray-500 hover:text-brand-dark">Projects</a></li>
+                            </ul>
+                        </div>
+                        <div class="mt-12 md:mt-0">
+                            <h3 class="text-sm font-semibold text-gray-500 tracking-wider uppercase">&nbsp;</h3>
+                             <ul role="list" class="mt-4 space-y-4">
+                                <li><a href="../insights/index.html" class="text-base text-gray-500 hover:text-brand-dark">Insights</a></li>
+                                <li><a href="../philosophy/index.html" class="text-base text-gray-500 hover:text-brand-dark">Philosophy</a></li>
+                                <li><a href="#" class="text-base text-gray-500 hover:text-brand-dark">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:grid md:grid-cols-1 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-semibold text-gray-500 tracking-wider uppercase">Legal</h3>
+                            <ul role="list" class="mt-4 space-y-4">
+                                <li><a href="../legal/privacy-policy/index.html" class="text-base text-gray-500 hover:text-brand-dark">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-200 pt-8">
+                <p class="text-base text-gray-400 xl:text-center">&copy; 2024 LOU-Ark Portfolio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const openIcon = document.getElementById('menu-open-icon');
+        const closeIcon = document.getElementById('menu-close-icon');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            openIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

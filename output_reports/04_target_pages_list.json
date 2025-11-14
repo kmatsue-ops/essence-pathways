@@ -1,0 +1,42 @@
+[
+  {
+    "title": "ホーム",
+    "file_name": "index.html",
+    "purpose": "訪問者が瞬時に「何者で、どんな価値を提供できるか」を理解し、興味を喚起。パーソナルブランドの核と主要ページへの導入を促す。"
+  },
+  {
+    "title": "About",
+    "file_name": "about/index.html",
+    "purpose": "自身のコンセプト、ミッション、探求の動機と根源的な情熱を詳細に伝え、深い共感を醸成する。「私という探求者」を深掘りする。"
+  },
+  {
+    "title": "Expertise",
+    "file_name": "expertise/index.html",
+    "purpose": "自身の専門分野（ミニマリズム、ウェルネス、サブカルチャー、デジタル）と、それぞれが本質的価値創造にどう繋がるかを具体的に説明する。「提供する価値」を明確化する。"
+  },
+  {
+    "title": "Projects",
+    "file_name": "projects/index.html",
+    "purpose": "自身の専門性、問題解決能力、プロジェクト遂行能力を具体的な実績を通して説得力を持って提示する。自身の思想やアプローチも明確に伝える。「私の歩み、確かな実績の証明」を提示する。"
+  },
+  {
+    "title": "Insights",
+    "file_name": "insights/index.html",
+    "purpose": "自身の専門分野に関する深い知見、思考プロセス、ユニークな視点を発信し、個人ブランドの権威性を確立。読者からの信頼と共感を獲得する。「思索の庭、未来を照らす知見」を提供する。"
+  },
+  {
+    "title": "Philosophy",
+    "file_name": "philosophy/index.html",
+    "purpose": "自身の活動の根底にあるミニマリズム、ウェルネス、深い体験の追求といった哲学のエッセンスを詳細に提示し、活動の動機と根源的な思想を伝える。「私の根源をなす探求の哲学」を詳述する。"
+  },
+  {
+    "title": "Contact",
+    "file_name": "contact/index.html",
+    "purpose": "採用、協業、講演、取材依頼など、ターゲットに合わせた具体的なアクションを促し、外部との接点を提供する。「お問い合わせ・協業のご相談」を受け付ける。"
+  },
+  {
+    "title": "Privacy Policy",
+    "file_name": "legal/privacy-policy/index.html",
+    "purpose": "個人情報保護に関する方針を明示し、サイト訪問者の信頼を確保する。"
+  }
+]

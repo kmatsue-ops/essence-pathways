@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | LOU-Ark Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Serif JP', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Inter', 'Noto Serif JP', sans-serif;
+            font-weight: 600;
+        }
+        .font-noto-serif {
+            font-family: 'Noto Serif JP', serif;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-dark': '#1a202c', // Deep, thoughtful charcoal
+                        'brand-light': '#f7fafc', // Clean, minimal off-white
+                        'brand-text': '#2d3748', // Primary text
+                        'brand-accent': '#2c7a7b', // Calm, deep teal
+                        'brand-subtle': '#e2e8f0', // Borders and dividers
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Noto Serif JP', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-light text-brand-text antialiased">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-brand-subtle">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="text-xl font-bold text-brand-dark tracking-wider">LOU-Ark</a>
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="../index.html" class="text-gray-600 hover:text-brand-accent transition-colors">Home</a>
+                <a href="../about/index.html" class="text-brand-accent font-semibold border-b-2 border-brand-accent">About</a>
+                <a href="../expertise/index.html" class="text-gray-600 hover:text-brand-accent transition-colors">Expertise</a>
+                <a href="../projects/index.html" class="text-gray-600 hover:text-brand-accent transition-colors">Projects</a>
+                <a href="../insights/index.html" class="text-gray-600 hover:text-brand-accent transition-colors">Insights</a>
+                <a href="../philosophy/index.html" class="text-gray-600 hover:text-brand-accent transition-colors">Philosophy</a>
+                <a href="../contact/index.html" class="text-gray-600 hover:text-brand-accent transition-colors">Contact</a>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-brand-dark focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <nav class="flex flex-col items-center space-y-4 py-4 border-t border-brand-subtle">
+                <a href="../index.html" class="text-gray-600 hover:text-brand-accent transition-colors">Home</a>
+                <a href="../about/index.html" class="text-brand-accent font-semibold">About</a>
+                <a href="../expertise/index.html" class="text-gray-600 hover:text-brand-accent transition-colors">Expertise</a>
+                <a href="../projects/index.html" class="text-gray-600 hover:text-brand-accent transition-colors">Projects</a>
+                <a href="../insights/index.html" class="text-gray-600 hover:text-brand-accent transition-colors">Insights</a>
+                <a href="../philosophy/index.html" class="text-gray-600 hover:text-brand-accent transition-colors">Philosophy</a>
+                <a href="../contact/index.html" class="text-gray-600 hover:text-brand-accent transition-colors">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-brand-dark font-noto-serif leading-tight">私という探求者</h1>
+                <p class="mt-6 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    モノに縛られず、心身を整えることで、本質的な価値と深い体験を探求する旅路。
+                    その過程で得た知見と、これから描く未来についてお話しします。
+                </p>
+            </div>
+        </section>
+
+        <!-- My Mission Section -->
+        <section class="py-20 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-12 items-center">
+                    <div class="md:col-span-1">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723a996f6ea?q=80&w=2070&auto=format&fit=crop" alt="思索に耽る人物のイメージ" class="rounded-lg shadow-xl aspect-square object-cover">
+                    </div>
+                    <div class="md:col-span-2">
+                        <h2 class="text-3xl md:text-4xl font-bold text-brand-dark font-noto-serif">私の使命：<br>余白に宿る本質的価値への旅</h2>
+                        <p class="mt-6 text-lg text-gray-700 leading-loose">
+                            情報とモノが溢れる現代において、私たちは本来見つめるべき価値を見失いがちです。私のミッションは、物理的なモノだけでなく、思考や時間の使い方においても「ミニマリズム」を実践し、意図的に「余白」を創り出すこと。その静かな空間で心身と向き合う「ウェルネス」を通じて、一時的な満足ではない、持続可能で深い豊かさを見出すことです。この探求の旅路で得た気づきや方法論を共有し、多くの人が自らの本質と繋がる手助けをしたいと願っています。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Origin Story Section -->
+        <section class="py-20 md:py-24 bg-white">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-dark font-noto-serif">探求の原点</h2>
+                    <p class="mt-4 text-lg text-gray-600">なぜ、私はこの道を歩むのか</p>
+                </div>
+                <div class="mt-12 space-y-8 text-gray-700 leading-relaxed text-lg">
+                    <p>
+                        私の探求は、かつての自分自身の経験から始まりました。デジタルテクノロジー業界の最前線で働く中で、常に最新情報を追い、無限のタスクに追われる日々。生産性を高めるためのツールは増え続け、効率化を追求するほどに、心の平穏は遠のいていきました。物理的な空間もデジタル空間も、所有物と情報で飽和状態にありました。
+                    </p>
+                    <p>
+                        ある時、ふと立ち止まり、自問しました。「本当に大切なものは何か？」と。この問いが、私をミニマリズムとウェルネスの世界へと導く転換点となりました。それは単なる片付けや健康法ではなく、自らの人生における「本質」を見極め、それ以外を削ぎ落としていく哲学的な実践でした。
+                    </p>
+                    <p>
+                        不要なモノを手放すことで得られた空間的な余白。瞑想やヨガを通じて得られた精神的な静寂。その「余白」の中で、私は初めて自分自身の内なる声に耳を傾けることができました。情報や他人の価値観に振り回されるのではなく、自分自身の軸で物事を判断し、深く味わう体験の豊かさに気づいたのです。この根源的な発見と情熱が、私のすべての活動の原動力となっています。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Philosophy in Practice Section -->
+        <section class="py-20 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-dark font-noto-serif">哲学から実践へ：4つの探求領域</h2>
+                    <p class="mt-6 text-lg text-gray-600 leading-relaxed">
+                        私の哲学は、机上の空論ではありません。日々の暮らしと仕事の中で、4つの専門領域として具体的に実践し、価値を創造しています。これらの領域は相互に関連し合いながら、「本質を極める」という一つの目的へと繋がっています。
+                    </p>
+                </div>
+
+                <div class="mt-16 grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    <!-- Card 1: Minimalist Lifestyle Design -->
+                    <div class="bg-white p-8 rounded-lg border border-brand-subtle shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="text-2xl font-bold text-brand-dark">ミニマリスト的ライフスタイルデザイン</h3>
+                        <p class="mt-4 text-gray-600 leading-relaxed">
+                            空間、時間、思考を最適化し、本質的な豊かさを創出します。物理的な整理術に留まらず、デジタル環境や人間関係においても「選択と集中」を促すことで、創造性と心の平穏を取り戻す支援を行います。
+                        </p>
+                    </div>
+
+                    <!-- Card 2: Self-Wellness Practice -->
+                    <div class="bg-white p-8 rounded-lg border border-brand-subtle shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="text-2xl font-bold text-brand-dark">セルフウェルネス実践</h3>
+                        <p class="mt-4 text-gray-600 leading-relaxed">
+                            心身の調和を育む、実践的で持続可能なアプローチ。ヨガ、瞑想、食育といった古くからの知恵を現代のライフスタイルに統合し、内側から輝くような健康と幸福感を探求します。
+                        </p>
+                    </div>
+
+                    <!-- Card 3: Subculture Curation -->
+                    <div class="bg-white p-8 rounded-lg border border-brand-subtle shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="text-2xl font-bold text-brand-dark">サブカルチャー・キュレーション</h3>
+                        <p class="mt-4 text-gray-600 leading-relaxed">
+                            映画、音楽、文学などの文化現象から、現代社会と人間の本質を洞察します。表層的なトレンドを追うのではなく、時代を超えて響く物語や表現を深く読み解き、新たな視点と知的な刺激を提供します。
+                        </p>
+                    </div>
+
+                    <!-- Card 4: Digital Content Utilization -->
+                    <div class="bg-white p-8 rounded-lg border border-brand-subtle shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="text-2xl font-bold text-brand-dark">デジタルコンテンツ活用術</h3>
+                        <p class="mt-4 text-gray-600 leading-relaxed">
+                            情報の海を、自らの成長と創造のための羅針盤に変えます。デジタルミニマリズムの思想に基づき、ツールの選定から情報整理、アウトプットまで、生産性を最大化するワークフローを設計します。
+                        </p>
+                    </div>
+                </div>
+                 <div class="mt-12 text-center">
+                    <a href="../expertise/index.html" class="inline-block bg-brand-accent text-white font-bold py-3 px-8 rounded-full hover:bg-opacity-90 transition-colors shadow-md">
+                        私の専門性について詳しく見る
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="py-20 md:py-32 bg-brand-dark">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white font-noto-serif">共鳴する仲間を求めて</h2>
+                <p class="mt-6 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                    私の探求の旅、そして「本質を極める」という価値観に少しでも共感いただけましたら、ぜひお声がけください。プロジェクトのご相談、協業のご提案、あるいは単なる意見交換でも心から歓迎します。共に新たな価値を創造できることを楽しみにしています。
+                </p>
+                <div class="mt-10">
+                    <a href="../contact/index.html" class="inline-block bg-white text-brand-accent font-bold py-4 px-10 rounded-full hover:bg-gray-100 transition-colors text-lg shadow-lg">
+                        お問い合わせはこちら
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-brand-subtle">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- About -->
+                <div class="col-span-3 md:col-span-1">
+                    <h3 class="text-lg font-bold text-brand-dark tracking-wider">LOU-Ark</h3>
+                    <p class="mt-4 text-gray-600">本質を極めるミニマリスト・ウェルネス。<br>心身の調和と深い体験の追求。</p>
+                </div>
+                <!-- Links -->
+                <div class="col-span-3 md:col-span-2 grid grid-cols-2 sm:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="font-semibold text-gray-700">Explore</h4>
+                        <nav class="mt-4 space-y-2">
+                            <a href="../index.html" class="block text-gray-600 hover:text-brand-accent">Home</a>
+                            <a href="../about/index.html" class="block text-gray-600 hover:text-brand-accent">About</a>
+                            <a href="../philosophy/index.html" class="block text-gray-600 hover:text-brand-accent">Philosophy</a>
+                        </nav>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-gray-700">Work</h4>
+                        <nav class="mt-4 space-y-2">
+                            <a href="../expertise/index.html" class="block text-gray-600 hover:text-brand-accent">Expertise</a>
+                            <a href="../projects/index.html" class="block text-gray-600 hover:text-brand-accent">Projects</a>
+                            <a href="../insights/index.html" class="block text-gray-600 hover:text-brand-accent">Insights</a>
+                        </nav>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-gray-700">Connect</h4>
+                        <nav class="mt-4 space-y-2">
+                            <a href="../contact/index.html" class="block text-gray-600 hover:text-brand-accent">Contact</a>
+                            <a href="../legal/privacy-policy/index.html" class="block text-gray-600 hover:text-brand-accent">Privacy Policy</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-brand-subtle text-center text-gray-500">
+                <p>&copy; 2024 LOU-Ark Portfolio. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>

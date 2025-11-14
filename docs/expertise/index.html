@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expertise | LOU-Ark Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #030712; /* Slightly darker than gray-950 for depth */
+            color: #F9FAFB;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #22d3ee, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #06b6d4;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+        .active {
+            color: #06b6d4;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        .fade-in-delay-1 { animation-delay: 0.2s; }
+        .fade-in-delay-2 { animation-delay: 0.4s; }
+        .fade-in-delay-3 { animation-delay: 0.6s; }
+        .fade-in-delay-4 { animation-delay: 0.8s; }
+    </style>
+</head>
+<body class="bg-gray-950 text-gray-100 font-sans antialiased selection:bg-cyan-500 selection:text-white">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-gray-950/80 backdrop-blur-sm border-b border-gray-800">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="text-2xl font-black tracking-tighter text-white hover:text-cyan-400 transition-colors duration-300">LOU-Ark</a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="../index.html" class="nav-link text-gray-300 hover:text-cyan-400">Home</a>
+                <a href="../about/index.html" class="nav-link text-gray-300 hover:text-cyan-400">About</a>
+                <a href="index.html" class="nav-link text-cyan-400 active">Expertise</a>
+                <a href="../projects/index.html" class="nav-link text-gray-300 hover:text-cyan-400">Projects</a>
+                <a href="../insights/index.html" class="nav-link text-gray-300 hover:text-cyan-400">Insights</a>
+                <a href="../philosophy/index.html" class="nav-link text-gray-300 hover:text-cyan-400">Philosophy</a>
+                <a href="../contact/index.html" class="nav-link text-gray-300 hover:text-cyan-400">Contact</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <nav class="flex flex-col items-center space-y-4 px-6 pt-2 pb-6 border-t border-gray-800">
+                <a href="../index.html" class="w-full text-center py-2 text-gray-300 hover:text-cyan-400 hover:bg-gray-800 rounded-md">Home</a>
+                <a href="../about/index.html" class="w-full text-center py-2 text-gray-300 hover:text-cyan-400 hover:bg-gray-800 rounded-md">About</a>
+                <a href="index.html" class="w-full text-center py-2 text-cyan-400 bg-gray-800 rounded-md">Expertise</a>
+                <a href="../projects/index.html" class="w-full text-center py-2 text-gray-300 hover:text-cyan-400 hover:bg-gray-800 rounded-md">Projects</a>
+                <a href="../insights/index.html" class="w-full text-center py-2 text-gray-300 hover:text-cyan-400 hover:bg-gray-800 rounded-md">Insights</a>
+                <a href="../philosophy/index.html" class="w-full text-center py-2 text-gray-300 hover:text-cyan-400 hover:bg-gray-800 rounded-md">Philosophy</a>
+                <a href="../contact/index.html" class="w-full text-center py-2 text-gray-300 hover:text-cyan-400 hover:bg-gray-800 rounded-md">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-24 sm:pt-32">
+
+        <!-- Hero Section -->
+        <section class="container mx-auto px-6 py-16 md:py-24 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-6xl font-black tracking-tight leading-tight fade-in">
+                    <span class="gradient-text">4つの専門領域</span>が織りなす<br>本質的価値の創造
+                </h1>
+                <p class="mt-8 text-lg md:text-xl text-gray-400 max-w-3xl mx-auto fade-in fade-in-delay-1">
+                    私の専門性は、一見すると異なる4つの領域から成り立っています。しかし、これらは「本質を追求し、心身の調和を通じて深い体験を創造する」という一つの目的のもとに統合されています。ミニマリズムで思考の余白を、ウェルネスで心身の土台を、サブカルチャーで洞察の視点を、そしてデジタルで実践の手段を。このページでは、それぞれの専門性がどのように結びつき、具体的な価値を生み出すのかを解き明かします。
+                </p>
+            </div>
+        </section>
+
+        <!-- Expertise Grid Section -->
+        <section class="container mx-auto px-6 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Card 1: Minimalism -->
+                <div class="bg-gray-900 border border-gray-800 rounded-lg p-8 transform hover:-translate-y-2 transition-transform duration-300 fade-in fade-in-delay-1" style="opacity:0;">
+                    <div class="flex items-center justify-center h-16 w-16 mb-6 rounded-full bg-cyan-900/50 border border-cyan-800">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 8h14M5 12h14M5 16h14" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">ミニマリスト的<br>ライフスタイルデザイン</h3>
+                    <p class="text-gray-400 mb-4">
+                        単なる「モノを減らす」行為ではなく、思考・情報・空間のノイズを削ぎ落とし、最も重要な要素に集中するための設計思想です。本質を見極め、意図的に余白を創出します。
+                    </p>
+                    <p class="text-sm text-cyan-400 font-semibold">提供価値： 思考の明晰化、生産性の向上、持続可能な豊かさの実現</p>
+                </div>
+
+                <!-- Card 2: Wellness -->
+                <div class="bg-gray-900 border border-gray-800 rounded-lg p-8 transform hover:-translate-y-2 transition-transform duration-300 fade-in fade-in-delay-2" style="opacity:0;">
+                    <div class="flex items-center justify-center h-16 w-16 mb-6 rounded-full bg-cyan-900/50 border border-cyan-800">
+                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                             <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                         </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">セルフウェルネス<br>実践</h3>
+                    <p class="text-gray-400 mb-4">
+                        心と身体の調和を保つための、科学的知見と東洋哲学に基づいた実践。ヨガ、瞑想、食育を通じ、内なるエネルギーを最適化し、ストレス耐性と創造性の土台を築きます。
+                    </p>
+                    <p class="text-sm text-cyan-400 font-semibold">提供価値： 心身の安定、レジリエンスの強化、創造性の基盤構築</p>
+                </div>
+
+                <!-- Card 3: Subculture -->
+                <div class="bg-gray-900 border border-gray-800 rounded-lg p-8 transform hover:-translate-y-2 transition-transform duration-300 fade-in fade-in-delay-3" style="opacity:0;">
+                    <div class="flex items-center justify-center h-16 w-16 mb-6 rounded-full bg-cyan-900/50 border border-cyan-800">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">サブカルチャー・<br>キュレーション</h3>
+                    <p class="text-gray-400 mb-4">
+                        映画、アニメ、ゲーム等の作品群を、単なる娯楽としてではなく、現代社会の価値観や人間の深層心理を映し出す「鏡」として分析・解説します。時代を読み解く洞察力を養います。
+                    </p>
+                    <p class="text-sm text-cyan-400 font-semibold">提供価値： 文化洞察力、未来予測の視点、複雑な事象の構造理解</p>
+                </div>
+
+                <!-- Card 4: Digital -->
+                <div class="bg-gray-900 border border-gray-800 rounded-lg p-8 transform hover:-translate-y-2 transition-transform duration-300 fade-in fade-in-delay-4" style="opacity:0;">
+                    <div class="flex items-center justify-center h-16 w-16 mb-6 rounded-full bg-cyan-900/50 border border-cyan-800">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">デジタルコンテンツ<br>活用術</h3>
+                    <p class="text-gray-400 mb-4">
+                        情報過多の時代において、デジタルツールを奴隷ではなく「思考の拡張装置」として使いこなす技術。情報の収集・整理・発信を最適化し、知的生産性を最大化します。
+                    </p>
+                    <p class="text-sm text-cyan-400 font-semibold">提供価値： 情報管理能力、知的生産性の最大化、効率的なワークフロー設計</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Synergy Section -->
+        <section class="py-20 sm:py-24">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto text-center">
+                     <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white mb-6">
+                        専門性のシナジー：価値創造のフレームワーク
+                    </h2>
+                    <p class="text-lg text-gray-400 mb-12">
+                        これら4つの専門性は独立しているのではなく、相互に作用し合うことで一つの強力なフレームワークを形成します。問題の本質を見抜き、持続可能な解決策をデザインし、実行するための統合的アプローチです。
+                    </p>
+                </div>
+                
+                <div class="max-w-5xl mx-auto relative">
+                    <!-- Central Goal -->
+                    <div class="flex justify-center items-center mb-10">
+                        <div class="text-center p-6 bg-gray-900 border-2 border-cyan-500 rounded-xl shadow-2xl shadow-cyan-500/10">
+                            <h3 class="text-xl font-bold text-white">本質的価値の創造と<br>深い体験の追求</h3>
+                            <p class="text-sm text-gray-400 mt-2">（最終的な提供価値）</p>
+                        </div>
+                    </div>
+                
+                    <!-- Connecting Lines (Decorative) -->
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -z-10" style="height: calc(100% - 120px); width: 2px;">
+                       <div class="h-full bg-gradient-to-b from-cyan-500 via-blue-500 to-transparent"></div>
+                    </div>
+
+                    <!-- Process Flow -->
+                    <div class="space-y-10">
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="md:w-5/12 text-center md:text-right md:pr-8">
+                                <h4 class="text-xl font-bold gradient-text">1. 土台の構築</h4>
+                                <p class="text-gray-300 mt-2">ウェルネスで心身を整え、<span class="text-white font-semibold">最高のパフォーマンスを発揮できる状態</span>を維持する。</p>
+                            </div>
+                            <div class="w-10 h-10 flex items-center justify-center bg-gray-800 border-2 border-gray-700 rounded-full my-4 md:my-0">1</div>
+                            <div class="md:w-5/12"></div>
+                        </div>
+
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="md:w-5/12 order-3 md:order-1"></div>
+                            <div class="w-10 h-10 flex items-center justify-center bg-gray-800 border-2 border-gray-700 rounded-full my-4 md:my-0 order-2">2</div>
+                            <div class="md:w-5/12 order-1 md:order-3 text-center md:text-left md:pl-8">
+                                <h4 class="text-xl font-bold gradient-text">2. ノイズの除去</h4>
+                                <p class="text-gray-300 mt-2">ミニマリズムで思考と環境を整理し、<span class="text-white font-semibold">課題の本質に集中できる余白</span>を創り出す。</p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="md:w-5/12 text-center md:text-right md:pr-8">
+                                <h4 class="text-xl font-bold gradient-text">3. 洞察の深化</h4>
+                                <p class="text-gray-300 mt-2">サブカルチャー分析で多角的な視点を取り入れ、<span class="text-white font-semibold">表層的ではない深層のニーズ</span>を理解する。</p>
+                            </div>
+                            <div class="w-10 h-10 flex items-center justify-center bg-gray-800 border-2 border-gray-700 rounded-full my-4 md:my-0">3</div>
+                            <div class="md:w-5/12"></div>
+                        </div>
+
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="md:w-5/12 order-3 md:order-1"></div>
+                            <div class="w-10 h-10 flex items-center justify-center bg-gray-800 border-2 border-gray-700 rounded-full my-4 md:my-0 order-2">4</div>
+                            <div class="md:w-5/12 order-1 md:order-3 text-center md:text-left md:pl-8">
+                                <h4 class="text-xl font-bold gradient-text">4. 実践と具現化</h4>
+                                <p class="text-gray-300 mt-2">デジタル技術で洞察を整理・構造化し、<span class="text-white font-semibold">効率的かつ創造的な解決策</span>として形にする。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="bg-gray-900">
+            <div class="container mx-auto px-6 py-20 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">この専門性がどう活かされるか</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-gray-400">
+                    私の思考と実践のフレームワークが、具体的なプロジェクトでどのように価値を生み出してきたかをご覧ください。理論から実践へ、その軌跡がここにあります。
+                </p>
+                <div class="mt-8 flex justify-center items-center gap-4">
+                    <a href="../projects/index.html" class="inline-block bg-cyan-500 text-white font-bold py-3 px-8 rounded-full hover:bg-cyan-600 transition-colors duration-300 shadow-lg shadow-cyan-500/20">
+                        プロジェクトを見る
+                    </a>
+                    <a href="../contact/index.html" class="inline-block bg-gray-800 text-gray-200 font-bold py-3 px-8 rounded-full hover:bg-gray-700 transition-colors duration-300">
+                        協業を相談する
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 border-t border-gray-800">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-white">LOU-Ark</h3>
+                    <p class="mt-2 text-gray-400">本質を極めるミニマリスト・ウェルネス：<br>心身の調和と深い体験の追求</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-gray-200">ナビゲーション</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="../about/index.html" class="text-gray-400 hover:text-cyan-400 transition-colors">About</a></li>
+                        <li><a href="../projects/index.html" class="text-gray-400 hover:text-cyan-400 transition-colors">Projects</a></li>
+                        <li><a href="../insights/index.html" class="text-gray-400 hover:text-cyan-400 transition-colors">Insights</a></li>
+                        <li><a href="../contact/index.html" class="text-gray-400 hover:text-cyan-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                     <h4 class="text-lg font-semibold text-gray-200">リーガル</h4>
+                     <ul class="mt-4 space-y-2">
+                         <li><a href="../legal/privacy-policy/index.html" class="text-gray-400 hover:text-cyan-400 transition-colors">Privacy Policy</a></li>
+                     </ul>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-800 pt-8 text-center text-gray-500">
+                <p>&copy; 2024 LOU-Ark Portfolio. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Fade-in animation on scroll
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = {
+            threshold: 0.2,
+            rootMargin: "0px 0px -50px 0px"
+        };
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>知見 | LOU-Ark Portfolio</title>
+    <meta name="description" content="データサイエンス、AI倫理、ミニマリズムの交差点から、本質的なQOL（生活の質）向上を探求する知見のハブページです。LOU-Arkが発信する深い洞察と実践的なアプローチをご覧ください。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #F8F9FA; /* --bg-color */
+            color: #343A40; /* --text-color */
+        }
+        .text-primary { color: #343A40; }
+        .bg-primary { background-color: #343A40; }
+        .border-primary { border-color: #343A40; }
+        .text-accent { color: #495057; }
+        .bg-accent { background-color: #495057; }
+        .bg-secondary { background-color: #E9ECEF; }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: #495057; /* --accent-color */
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+        .nav-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        .nav-link.active {
+            font-weight: 500;
+            color: #343A40; /* --text-color */
+        }
+        .nav-link.active::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        .prose-custom h2 {
+            border-bottom: 2px solid #E9ECEF; /* --secondary-color */
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo/Site Title -->
+                <div class="flex-shrink-0">
+                    <a href="../index.html" class="text-2xl font-bold text-primary tracking-wider">LOU-Ark</a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex md:space-x-8">
+                    <a href="../philosophy/index.html" class="nav-link text-gray-600 hover:text-primary">哲学</a>
+                    <a href="index.html" class="nav-link text-primary active">知見</a>
+                    <a href="../projects/index.html" class="nav-link text-gray-600 hover:text-primary">実績</a>
+                    <a href="../about/index.html" class="nav-link text-gray-600 hover:text-primary">私について</a>
+                    <a href="../contact/index.html" class="nav-link text-gray-600 hover:text-primary">お問い合わせ</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="../philosophy/index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-50">哲学</a>
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-primary bg-gray-100">知見</a>
+                <a href="../projects/index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-50">実績</a>
+                <a href="../about/index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-50">私について</a>
+                <a href="../contact/index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-50">お問い合わせ</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-12 sm:py-16 lg:py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl sm:text-5xl font-extrabold text-primary tracking-tight">知見</h1>
+                <p class="mt-4 text-lg text-gray-600">本質的な豊かさを探求する思考の軌跡</p>
+                <p class="mt-2 text-sm text-gray-500">公開日: 2025年11月14日</p>
+            </div>
+
+            <div class="prose-custom max-w-none text-lg text-gray-700 leading-relaxed">
+                <p class="mb-8">
+                    現代は、情報、テクノロジー、そして選択肢に溢れています。しかし、その豊かさが必ずしも私たちの「生活の質（QOL）」や内面的な充足感に結びついているとは限りません。このセクションでは、私の探求の中核をなす三つの領域—「データとAIによるQOLの最適化」「AI時代の倫理と意思決定」「ミニマリズムとウェルネスの実践」—に関する知見を、具体的な記事として集積しています。
+                </p>
+                <p>
+                    ここでは、データサイエンスという客観的なレンズを通して自己を理解し、AIという強力なツールを倫理的に活用する方法を探ります。同時に、情報やモノを削ぎ落とし、心身の調和を取り戻すミニマリズムの智慧にも光を当てます。これらは一見すると異なる分野ですが、「本質を見極め、より良く生きる」という一点で深く結びついています。これらの記事が、あなた自身の豊かさを見つめ直すための一助となれば幸いです。
+                </p>
+
+                <!-- Articles Section -->
+                <div class="mt-16">
+                    <!-- Category 1: データとAIによるQOLの最適化 -->
+                    <section id="data-ai-qol">
+                        <h2 class="text-3xl font-bold text-primary tracking-tight">データとAIによるQOLの最適化</h2>
+                        <div class="mt-6 grid gap-8">
+                            <article class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+                                <h3 class="text-xl font-semibold text-primary">
+                                    <a href="lifelog-data-driven-qol-optimization-ai-ethics-1.html" class="hover:underline">ライフログ分析によるQOL最大化戦略：データ駆動型意思決定を実践するためのAI活用法と倫理的課題</a>
+                                </h3>
+                                <p class="mt-3 text-base text-gray-600">日々のデータを活用して生活の質を科学的に向上させる方法とは？AIを用いた意思決定の最適化と、その際に考慮すべき倫理的側面を深く掘り下げます。</p>
+                            </article>
+                            <article class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+                                <h3 class="text-xl font-semibold text-primary">
+                                    <a href="quantifying-qol-causal-inference-reinforcement-learning-12.html" class="hover:underline">主観的ウェルビーイングの定量化：データサイエンスで解き明かすQOL向上の因果関係と強化学習モデルの応用</a>
+                                </h3>
+                                <p class="mt-3 text-base text-gray-600">「幸福」や「満足度」といった主観的な感覚をデータで捉えることは可能か。因果推論と強化学習を用い、QOL向上の本質的な要因を解き明かすアプローチを探ります。</p>
+                            </article>
+                            <article class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+                                <h3 class="text-xl font-semibold text-primary">
+                                    <a href="lifelog-data-analysis-for-decision-making-sleep-optimization-framework-18.html" class="hover:underline">ライフログ分析による意思決定の科学：睡眠データから導く生産性最大化のフレームワーク</a>
+                                </h3>
+                                <p class="mt-3 text-base text-gray-600">質の高い睡眠は、日中のパフォーマンスにどう影響するのか。個人の睡眠データを分析し、生産性を最大化するための具体的なフレームワークを構築します。</p>
+                            </article>
+                            <article class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+                                <h3 class="text-xl font-semibold text-primary">
+                                    <a href="data-driven-career-strategy-visualizing-market-value-with-bayesian-inference-20.html" class="hover:underline">データサイエンスを応用したキャリア戦略：ベイズ推定による自己の市場価値と最適パスの可視化</a>
+                                </h3>
+                                <p class="mt-3 text-base text-gray-600">キャリアという不確実な道のりを、データで航海する。ベイズ推定を用いて自身のスキルセットと市場価値を可視化し、最適なキャリアパスを設計する手法を解説します。</p>
+                            </article>
+                             <article class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+                                <h3 class="text-xl font-semibold text-primary">
+                                    <a href="scientific-approach-qol-improvement-lifelog-data-analysis-30.html" class="hover:underline">ライフログデータで解き明かすQOL向上の科学的アプローチ：睡眠、活動、生産性の相関分析</a>
+                                </h3>
+                                <p class="mt-3 text-base text-gray-600">私たちの日常に潜むパフォーマンス向上の鍵とは？睡眠、身体活動、知的生産性のデータを統合的に分析し、QOLを高めるための相関関係を明らかにします。</p>
+                            </article>
+                        </div>
+                    </section>
+
+                    <!-- Category 2: AI時代の倫理と意思決定 -->
+                    <section id="ai-ethics-decision" class="mt-16">
+                        <h2 class="text-3xl font-bold text-primary tracking-tight">AI時代の倫理と意思決定</h2>
+                        <div class="mt-6 grid gap-8">
+                            <article class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+                                <h3 class="text-xl font-semibold text-primary">
+                                    <a href="explainable-ai-xai-ethical-decision-making-future-2.html" class="hover:underline">AI倫理の最前線：説明可能なAI（XAI）が拓く、透明性の高いデータ駆動型意思決定の未来</a>
+                                </h3>
+                                <p class="mt-3 text-base text-gray-600">AIの「ブラックボックス」問題にどう向き合うか。XAI技術がもたらす透明性が、いかにして公正で倫理的な意思決定を可能にするのか、その最前線に迫ります。</p>
+                            </article>
+                            <article class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+                                <h3 class="text-xl font-semibold text-primary">
+                                    <a href="decision-science-overcoming-cognitive-bias-with-data-3.html" class="hover:underline">意思決定の科学：データ分析はいかに人間の認知バイアスを克服し、最適な選択を導くか</a>
+                                </h3>
+                                <p class="mt-3 text-base text-gray-600">私たちは本当に合理的な選択をしているのか。データ分析を羅針盤とし、人間特有の認知バイアスを乗り越え、より質の高い意思決定を行うための科学的アプローチを考察します。</p>
+                            </article>
+                             <article class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+                                <h3 class="text-xl font-semibold text-primary">
+                                    <a href="scientific-optimization-of-decision-making-with-lifelog-analysis-10.html" class="hover:underline">ライフログ分析による意思決定の科学的最適化：データで乗り越える認知バイアスとQOL向上の実践ガイド</a>
+                                </h3>
+                                <p class="mt-3 text-base text-gray-600">個人のライフログは、自身の認知バイアスを映す鏡となる。客観的データに基づき、日々の選択を最適化し、QOL向上に繋げるための実践的な方法論を提示します。</p>
+                            </article>
+                            <article class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+                                <h3 class="text-xl font-semibold text-primary">
+                                    <a href="ethical-ai-design-federated-learning-differential-privacy-11.html" class="hover:underline">パーソナルAI時代の倫理設計：QOLを最大化する連合学習と差分プライバシー技術</a>
+                                </h3>
+                                <p class="mt-3 text-base text-gray-600">個人のデータを守りながら、パーソナライズの恩恵を享受するには？プライバシー保護技術である連合学習と差分プライバシーが、倫理的なAI設計の鍵となる理由を解説します。</p>
+                            </article>
+                             <article class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+                                <h3 class="text-xl font-semibold text-primary">
+                                    <a href="ethical-considerations-in-personal-ai-data-privacy-and-algorithmic-transparency-19.html" class="hover:underline">パーソナルAI時代の倫理：QOL最適化におけるデータプライバシーとアルゴリズムの透明性</a>
+                                </h3>
+                                <p class="mt-3 text-base text-gray-600">AIが私たちの生活を最適化する未来において、何を犠牲にしてはならないのか。データプライバシーの保護とアルゴリズムの透明性が、なぜ倫理の根幹をなすのかを論じます。</p>
+                            </article>
+                             <article class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+                                <h3 class="text-xl font-semibold text-primary">
+                                    <a href="ai-decision-making-overcoming-cognitive-bias-ethical-issues-31.html" class="hover:underline">AIは最良の意思決定パートナーか？認知的バイアスを克服するAI活用法と倫理的課題</a>
+                                </h3>
+                                <p class="mt-3 text-base text-gray-600">AIを意思決定のパートナーとして迎える時、私たちは何を期待し、何を警戒すべきか。AIの能力を最大限に引き出しつつ、倫理的な落とし穴を避けるための視点を提供します。</p>
+                            </article>
+                             <article class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+                                <h3 class="text-xl font-semibold text-primary">
+                                    <a href="personalization-privacy-dilemma-differential-privacy-strategy-32.html" class="hover:underline">パーソナライゼーションとプライバシーのジレンマ：差分プライバシーで実現する倫理的なデータ活用戦略</a>
+                                </h3>
+                                <p class="mt-3 text-base text-gray-600">利便性の高いパーソナライゼーションと、個人のプライバシー保護。この二律背反する要求を、差分プライバシーという技術がいかにして両立させるのかを探求します。</p>
+                            </article>
+                        </div>
+                    </section>
+
+                    <!-- Category 3: ミニマリズムとウェルネスの実践 -->
+                    <section id="minimalism-wellness" class="mt-16">
+                        <h2 class="text-3xl font-bold text-primary tracking-tight">ミニマリズムとウェルネスの実践</h2>
+                        <div class="mt-6 grid gap-8">
+                            <article class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+                                <h3 class="text-xl font-semibold text-primary">
+                                    <a href="digital-minimalism-guide-for-mental-clarity-33.html" class="hover:underline">「情報過多」から心を解放する。思考をクリアにするデジタル・ミニマリズム実践ガイド</a>
+                                </h3>
+                                <p class="mt-3 text-base text-gray-600">日々の通知や無限スクロールに疲弊していませんか？本記事では、心身の調和を取り戻すための具体的なデジタル整理術を解説。情報の本質を見極め、穏やかで深い思考を取り戻すためのステップを、ウェルネスの観点から探求します。</p>
+                            </article>
+                            <article class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+                                <h3 class="text-xl font-semibold text-primary">
+                                    <a href="minimalist-food-philosophy-ichiju-issai-wellness-34.html" class="hover:underline">「一汁一菜」に学ぶ、ミニマリストの究極の食養生。心と体を満たす本質的な食卓の作り方</a>
+                                </h3>
+                                <p class="mt-3 text-base text-gray-600">多くの食材や複雑な調理法は不要です。日本の伝統的な食の知恵「一汁一菜」を現代のウェルネスとして再解釈。最小限の要素で最大限の栄養と満足感を得る、心身が整うミニマルな食生活の哲学と実践法を紐解きます。</p>
+                            </article>
+                            <article class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+                                <h3 class="text-xl font-semibold text-primary">
+                                    <a href="minimal-interior-design-for-yoga-meditation-space-35.html" class="hover:underline">空間を整え、心を調律する。ヨガと瞑想の効果を最大化するミニマル・インテリア術</a>
+                                </h3>
+                                <p class="mt-3 text-base text-gray-600">あなたの部屋は、内なる静けさを育む聖域ですか？モノを減らすだけでなく、光、音、余白を活かして心身を調律する空間作りの秘訣を解説。ヨガや瞑想の質を深めるための、本質的なインテリアデザインを探求します。</p>
+                            </article>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary">
+        <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 overflow-hidden">
+            <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
+                <div class="px-5 py-2">
+                    <a href="../index.html" class="text-base text-gray-600 hover:text-gray-900">ホーム</a>
+                </div>
+                <div class="px-5 py-2">
+                    <a href="../about/index.html" class="text-base text-gray-600 hover:text-gray-900">私について</a>
+                </div>
+                <div class="px-5 py-2">
+                    <a href="../contact/index.html" class="text-base text-gray-600 hover:text-gray-900">お問い合わせ</a>
+                </div>
+                <div class="px-5 py-2">
+                    <a href="../legal/index.html" class="text-base text-gray-600 hover:text-gray-900">法務情報</a>
+                </div>
+            </nav>
+            <p class="mt-8 text-center text-base text-gray-500">
+                &copy; 2025 LOU-Ark Portfolio. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
+
+</body>
+</html>

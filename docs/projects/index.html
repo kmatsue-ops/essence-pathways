@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | LOU-Ark Portfolio</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        /* A little extra style for smooth scrolling and font consistency */
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+            color: #1e293b; /* slate-800 */
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        .active-nav {
+            border-bottom: 2px solid #10b981; /* emerald-500 */
+            color: #10b981;
+        }
+    </style>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans JP', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            'primary': '#1e293b', // slate-800
+                            'secondary': '#475569', // slate-600
+                            'accent': '#10b981', // emerald-500
+                            'light': '#f8fafc', // slate-50
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-light text-brand-primary antialiased">
+
+    <!-- Header -->
+    <header class="bg-brand-light/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="../index.html" class="text-2xl font-serif font-bold text-brand-primary hover:text-brand-accent transition-colors duration-300">
+                        LOU-Ark
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="text-brand-secondary hover:text-brand-accent transition-colors duration-300 font-medium">Home</a>
+                    <a href="../about/index.html" class="text-brand-secondary hover:text-brand-accent transition-colors duration-300 font-medium">About</a>
+                    <a href="../expertise/index.html" class="text-brand-secondary hover:text-brand-accent transition-colors duration-300 font-medium">Expertise</a>
+                    <a href="index.html" class="text-brand-accent font-bold border-b-2 border-brand-accent">Projects</a>
+                    <a href="../insights/index.html" class="text-brand-secondary hover:text-brand-accent transition-colors duration-300 font-medium">Insights</a>
+                    <a href="../philosophy/index.html" class="text-brand-secondary hover:text-brand-accent transition-colors duration-300 font-medium">Philosophy</a>
+                    <a href="../contact/index.html" class="text-brand-secondary hover:text-brand-accent transition-colors duration-300 font-medium">Contact</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-brand-secondary hover:text-brand-primary focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand-accent">
+                        <span class="sr-only">Open main menu</span>
+                        <i id="menu-icon-open" class="fas fa-bars fa-lg"></i>
+                        <i id="menu-icon-close" class="fas fa-times fa-lg hidden"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="../index.html" class="block px-3 py-2 rounded-md text-base font-medium text-brand-secondary hover:text-brand-primary hover:bg-slate-100">Home</a>
+                <a href="../about/index.html" class="block px-3 py-2 rounded-md text-base font-medium text-brand-secondary hover:text-brand-primary hover:bg-slate-100">About</a>
+                <a href="../expertise/index.html" class="block px-3 py-2 rounded-md text-base font-medium text-brand-secondary hover:text-brand-primary hover:bg-slate-100">Expertise</a>
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-brand-accent bg-emerald-50">Projects</a>
+                <a href="../insights/index.html" class="block px-3 py-2 rounded-md text-base font-medium text-brand-secondary hover:text-brand-primary hover:bg-slate-100">Insights</a>
+                <a href="../philosophy/index.html" class="block px-3 py-2 rounded-md text-base font-medium text-brand-secondary hover:text-brand-primary hover:bg-slate-100">Philosophy</a>
+                <a href="../contact/index.html" class="block px-3 py-2 rounded-md text-base font-medium text-brand-secondary hover:text-brand-primary hover:bg-slate-100">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="py-24 sm:py-32">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-brand-primary leading-tight tracking-tight">
+                    Projects: My Path, A Testament to Proven Expertise
+                </h1>
+                <p class="mt-6 max-w-3xl mx-auto text-lg text-brand-secondary leading-8">
+                    このページは、私の哲学「本質を極めるミニマリスト・ウェルネス」を実践へと昇華させた記録です。各プロジェクトは単なる成果物の羅列ではなく、課題の本質を見抜き、解決へと導いた思考の軌跡そのもの。私の専門性、問題解決能力、そして未来への貢献可能性を、具体的な実績を通してご覧ください。
+                </p>
+            </div>
+        </section>
+
+        <!-- Category Navigation -->
+        <section class="sticky top-20 bg-brand-light/90 backdrop-blur-sm z-40 py-4 border-b border-t border-slate-200">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <nav class="flex flex-wrap justify-center gap-x-4 gap-y-2 sm:gap-x-6">
+                    <a href="#minimalist-design" class="px-3 py-2 text-sm sm:text-base font-medium text-brand-secondary hover:text-brand-accent transition-colors duration-300">ライフスタイルデザイン</a>
+                    <a href="#self-wellness" class="px-3 py-2 text-sm sm:text-base font-medium text-brand-secondary hover:text-brand-accent transition-colors duration-300">セルフウェルネス</a>
+                    <a href="#subculture-curation" class="px-3 py-2 text-sm sm:text-base font-medium text-brand-secondary hover:text-brand-accent transition-colors duration-300">サブカルチャーキュレーション</a>
+                    <a href="#digital-contents" class="px-3 py-2 text-sm sm:text-base font-medium text-brand-secondary hover:text-brand-accent transition-colors duration-300">デジタルコンテンツ活用</a>
+                    <a href="#collaborations" class="px-3 py-2 text-sm sm:text-base font-medium text-brand-secondary hover:text-brand-accent transition-colors duration-300">コラボレーション</a>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Project Sections -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 space-y-28">
+
+            <!-- 1. Minimalist Lifestyle Design -->
+            <section id="minimalist-design">
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-primary">ミニマリスト的ライフスタイルデザイン</h2>
+                    <p class="mt-4 text-lg text-brand-secondary">空間と心の余白を創造する実践。本質を見極め、豊かさを再定義するアプローチ。</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                        <img src="https://images.unsplash.com/photo-1588496973588-34a17b3a4a36?q=80&w=1920&auto=format&fit=crop" alt="Workspace Optimization" class="w-full h-64 object-cover">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-serif font-bold text-brand-primary">思考と空間の最適化による生産性向上プロジェクト</h3>
+                            <p class="mt-4 text-brand-secondary">スタートアップ企業のワークスペースとデジタル環境における「ノイズ」を削減し、本質的な業務に集中できる環境を構築。物理的・情報的整理を通じて、チーム全体の生産性を15%向上させました。</p>
+                            <div class="mt-6">
+                                <h4 class="font-bold text-brand-primary">私のアプローチ</h4>
+                                <p class="mt-2 text-sm text-brand-secondary">デジタルミニマリズムの思想に基づき、情報共有フローを再設計。物理空間では「ワンイン・ワンアウト」ルールを導入し、思考の断絶を防ぐゾーニングを提案しました。</p>
+                            </div>
+                            <div class="mt-6 flex flex-wrap gap-2">
+                                <span class="bg-emerald-100 text-emerald-800 text-xs font-medium px-2.5 py-1 rounded-full">コンサルティング</span>
+                                <span class="bg-emerald-100 text-emerald-800 text-xs font-medium px-2.5 py-1 rounded-full">空間デザイン</span>
+                                <span class="bg-emerald-100 text-emerald-800 text-xs font-medium px-2.5 py-1 rounded-full">生産性向上</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1920&auto=format&fit=crop" alt="Personal Life Design" class="w-full h-64 object-cover">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-serif font-bold text-brand-primary">個人の価値観に基づく「暮らしのOS」再構築支援</h3>
+                            <p class="mt-4 text-brand-secondary">情報過多と消費社会に疲弊した個人クライアントに対し、自身の価値観を軸とした生活全体の再設計をサポート。「持たない豊かさ」を体感し、自己肯定感の向上と可処分時間の増加を実現しました。</p>
+                             <div class="mt-6">
+                                <h4 class="font-bold text-brand-primary">私のアプローチ</h4>
+                                <p class="mt-2 text-sm text-brand-secondary">価値観の明確化ワークショップから始め、モノ・情報・人間関係の三側面から「本質的でないもの」を手放すプロセスを伴走。習慣化のメカニズムを用いて、リバウンドしないミニマリズムを定着させました。</p>
+                            </div>
+                            <div class="mt-6 flex flex-wrap gap-2">
+                                <span class="bg-emerald-100 text-emerald-800 text-xs font-medium px-2.5 py-1 rounded-full">コーチング</span>
+                                <span class="bg-emerald-100 text-emerald-800 text-xs font-medium px-2.5 py-1 rounded-full">ライフデザイン</span>
+                                <span class="bg-emerald-100 text-emerald-800 text-xs font-medium px-2.5 py-1 rounded-full">習慣形成</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 2. Self Wellness -->
+            <section id="self-wellness">
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-primary">セルフウェルネス実践</h2>
+                    <p class="mt-4 text-lg text-brand-secondary">心身の調和を育むホリスティックアプローチ。内なる声に耳を傾け、持続可能な健康を築く。</p>
+                </div>
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1920&auto=format&fit=crop" alt="Corporate Wellness Program" class="w-full h-64 object-cover">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-serif font-bold text-brand-primary">企業向けストレスマネジメントプログラム開発</h3>
+                            <p class="mt-4 text-brand-secondary">IT企業と協業し、従業員のメンタルヘルス向上を目的としたウェルネスプログラムを開発・実践。ヨガ、瞑想、食育を統合し、参加者のストレスレベルを平均25%低減させる成果を上げました。</p>
+                             <div class="mt-6">
+                                <h4 class="font-bold text-brand-primary">私のアプローチ</h4>
+                                <p class="mt-2 text-sm text-brand-secondary">科学的根拠に基づきつつ、多忙な業務の中でも実践可能な短時間セッションを設計。オンラインとオフラインを組み合わせ、個々の状態に合わせたパーソナライズされたアドバイスを提供しました。</p>
+                            </div>
+                            <div class="mt-6 flex flex-wrap gap-2">
+                                <span class="bg-sky-100 text-sky-800 text-xs font-medium px-2.5 py-1 rounded-full">ウェルネスコーチング</span>
+                                <span class="bg-sky-100 text-sky-800 text-xs font-medium px-2.5 py-1 rounded-full">プログラムデザイン</span>
+                                <span class="bg-sky-100 text-sky-800 text-xs font-medium px-2.5 py-1 rounded-full">瞑想指導</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1920&auto=format&fit=crop" alt="Wellness Workshop" class="w-full h-64 object-cover">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-serif font-bold text-brand-primary">「食と心」を結ぶマインドフルイーティング・ワークショップ</h3>
+                            <p class="mt-4 text-brand-secondary">地域のコミュニティスペースにて、食事が心身に与える影響を学び、実践するワークショップを定期開催。参加者が自身の食生活を見直し、より意識的な選択ができるようになることを支援しました。</p>
+                             <div class="mt-6">
+                                <h4 class="font-bold text-brand-primary">私のアプローチ</h4>
+                                <p class="mt-2 text-sm text-brand-secondary">単なる栄養学の知識提供に留まらず、瞑想の手法を取り入れた「味わう」体験を重視。参加者同士の対話を通じて、食にまつわる個人的な課題や発見を共有する場を創出しました。</p>
+                            </div>
+                            <div class="mt-6 flex flex-wrap gap-2">
+                                <span class="bg-sky-100 text-sky-800 text-xs font-medium px-2.5 py-1 rounded-full">食育</span>
+                                <span class="bg-sky-100 text-sky-800 text-xs font-medium px-2.5 py-1 rounded-full">ワークショップ運営</span>
+                                <span class="bg-sky-100 text-sky-800 text-xs font-medium px-2.5 py-1 rounded-full">コミュニティ形成</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. Subculture Curation -->
+            <section id="subculture-curation">
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-primary">サブカルチャー・キュレーション</h2>
+                    <p class="mt-4 text-lg text-brand-secondary">深層を探る文化の案内人。作品を通して現代社会と人間の本質を洞察する。</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                    <div class="md:flex">
+                        <div class="md:flex-shrink-0">
+                            <img class="h-64 w-full object-cover md:w-64" src="https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?q=80&w=1920&auto=format&fit=crop" alt="Subculture Event">
+                        </div>
+                        <div class="p-8 flex-grow">
+                            <h3 class="text-2xl font-serif font-bold text-brand-primary">『現代社会への問い』をテーマにした深掘り作品解説イベント</h3>
+                            <p class="mt-4 text-brand-secondary">映画『ブレードランナー』やアニメ『攻殻機動隊』など、特定の作品を題材に、テクノロジーと人間性の関係性を問うトークイベントを企画・登壇。参加者と共に哲学的対話を深め、新たな視点を提供しました。</p>
+                            <div class="mt-6">
+                                <h4 class="font-bold text-brand-primary">私のアプローチ</h4>
+                                <p class="mt-2 text-sm text-brand-secondary">作品の表層的なストーリー解説ではなく、制作背景や哲学的文脈をリサーチし、独自の解釈を提示。参加者が自身の言葉で思考を表現できるよう、ファシリテーションを重視したインタラクティブな場作りを心掛けました。</p>
+                            </div>
+                            <div class="mt-6 flex flex-wrap gap-2">
+                                <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-1 rounded-full">文化分析</span>
+                                <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-1 rounded-full">コンテンツ企画</span>
+                                <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-1 rounded-full">イベント運営</span>
+                                <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-1 rounded-full">パブリックスピーキング</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. Digital Contents -->
+            <section id="digital-contents">
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-primary">デジタルコンテンツ活用術</h2>
+                    <p class="mt-4 text-lg text-brand-secondary">情報の混沌に秩序をもたらす。ツールを最適化し、創造性と生産性を最大化する。</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                    <div class="md:flex">
+                         <div class="md:flex-shrink-0">
+                            <img class="h-64 w-full object-cover md:w-64" src="https://images.unsplash.com/photo-1556742044-538253a6c175?q=80&w=1920&auto=format&fit=crop" alt="Digital Workflow">
+                        </div>
+                        <div class="p-8 flex-grow">
+                            <h3 class="text-2xl font-serif font-bold text-brand-primary">スモールビジネス向けデジタルワークフロー最適化支援</h3>
+                            <p class="mt-4 text-brand-secondary">情報管理に課題を抱える小規模事業主に対し、Notionをハブとした情報一元化と業務フローの自動化を支援。資料作成時間を40%削減し、コア業務に集中できる環境を構築しました。</p>
+                             <div class="mt-6">
+                                <h4 class="font-bold text-brand-primary">私のアプローチ</h4>
+                                <p class="mt-2 text-sm text-brand-secondary">まずクライアントの業務全体を可視化し、ボトルネックを特定。ツールの導入だけでなく、デジタルミニマリズムの思想に基づき「どの情報を、なぜ管理するのか」という根本的な問いから情報設計を行いました。</p>
+                            </div>
+                            <div class="mt-6 flex flex-wrap gap-2">
+                                <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-1 rounded-full">情報設計</span>
+                                <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-1 rounded-full">ツール導入支援</span>
+                                <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-1 rounded-full">業務改善</span>
+                                <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-1 rounded-full">Notion</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 5. Collaborations -->
+            <section id="collaborations">
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-primary">コラボレーション・寄稿実績</h2>
+                    <p class="mt-4 text-lg text-brand-secondary">共創と発信の軌跡。境界を越え、専門性を社会へと還元する活動。</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-8 sm:p-10">
+                    <ul class="space-y-8">
+                        <li class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-8 h-8 bg-brand-accent/10 text-brand-accent rounded-full flex items-center justify-center">
+                                <i class="fas fa-feather-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-brand-primary">寄稿: ウェブメディア「MINIMALIST STYLE」</h4>
+                                <p class="mt-1 text-brand-secondary">記事『デジタルデトックスの先にあるもの：創造的余白の生み出し方』を寄稿。月間ベスト記事に選出。</p>
+                                <a href="#" class="text-sm font-medium text-brand-accent hover:underline mt-2 inline-block">記事を読む &rarr;</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-8 h-8 bg-brand-accent/10 text-brand-accent rounded-full flex items-center justify-center">
+                                <i class="fas fa-microphone"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-brand-primary">登壇: カンファレンス「Wellness NEXT 2023」</h4>
+                                <p class="mt-1 text-brand-secondary">セッション『ミレニアル世代のウェルネス：心身の調和とキャリアデザイン』にスピーカーとして登壇。</p>
+                                <a href="#" class="text-sm font-medium text-brand-accent hover:underline mt-2 inline-block">詳細を見る &rarr;</a>
+                            </div>
+                        </li>
+                         <li class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-8 h-8 bg-brand-accent/10 text-brand-accent rounded-full flex items-center justify-center">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-brand-primary">共同プロジェクト: 「Local Wellness Hub」</h4>
+                                <p class="mt-1 text-brand-secondary">地域のヨガスタジオ、オーガニックカフェと連携し、地域住民向けのウェルネスコミュニティ創設を支援。企画・運営を担当。</p>
+                                <a href="#" class="text-sm font-medium text-brand-accent hover:underline mt-2 inline-block">活動内容を見る &rarr;</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-primary text-slate-300">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="col-span-2 md:col-span-1">
+                    <h3 class="text-2xl font-serif font-bold text-white">LOU-Ark</h3>
+                    <p class="mt-2 text-sm text-slate-400">本質を極めるミニマリスト・ウェルネス</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold tracking-wider uppercase text-slate-400">Navigation</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="../about/index.html" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="index.html" class="hover:text-white transition-colors">Projects</a></li>
+                        <li><a href="../insights/index.html" class="hover:text-white transition-colors">Insights</a></li>
+                        <li><a href="../contact/index.html" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold tracking-wider uppercase text-slate-400">Explore</h4>
+                     <ul class="mt-4 space-y-2">
+                        <li><a href="../expertise/index.html" class="hover:text-white transition-colors">Expertise</a></li>
+                        <li><a href="../philosophy/index.html" class="hover:text-white transition-colors">Philosophy</a></li>
+                        <li><a href="../legal/privacy-policy/index.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-slate-700 flex flex-col sm:flex-row justify-between items-center">
+                <p class="text-sm text-slate-400">&copy; 2024 LOU-Ark Portfolio. All Rights Reserved.</p>
+                <div class="flex space-x-6 mt-4 sm:mt-0">
+                    <a href="#" class="text-slate-400 hover:text-white transition-colors"><span class="sr-only">Twitter</span><i class="fab fa-twitter fa-lg"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-white transition-colors"><span class="sr-only">LinkedIn</span><i class="fab fa-linkedin-in fa-lg"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-white transition-colors"><span class="sr-only">GitHub</span><i class="fab fa-github fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIconOpen = document.getElementById('menu-icon-open');
+        const menuIconClose = document.getElementById('menu-icon-close');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuIconOpen.classList.toggle('hidden');
+            menuIconClose.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

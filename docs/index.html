@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ホーム | LOU-Ark Portfolio - 本質を極めるミニマリスト・ウェルネス</title>
+    <meta name="description" content="本質を極めるミニマリスト・ウェルネス。心身の調和と深い体験を追求し、豊かな未来をデザインする探求者のポートフォリオサイトです。ミニマリズム、ウェルネス、サブカルチャー、デジタル活用術の専門性を紹介します。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #22d3ee, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section-title {
+            @apply text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl;
+        }
+        .section-subtitle {
+             @apply mt-2 text-lg leading-8 text-gray-400;
+        }
+        .cta-button {
+            @apply inline-block rounded-md bg-cyan-600 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-cyan-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600 transition-colors duration-300;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-300">
+
+    <!-- Header -->
+    <header id="header" class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
+            <div class="flex items-center">
+                <a href="index.html" class="text-2xl font-bold text-white tracking-wider">LOU-Ark</a>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="about/index.html" class="text-gray-300 hover:text-cyan-400 transition-colors duration-300">About</a>
+                <a href="expertise/index.html" class="text-gray-300 hover:text-cyan-400 transition-colors duration-300">Expertise</a>
+                <a href="projects/index.html" class="text-gray-300 hover:text-cyan-400 transition-colors duration-300">Projects</a>
+                <a href="insights/index.html" class="text-gray-300 hover:text-cyan-400 transition-colors duration-300">Insights</a>
+                <a href="philosophy/index.html" class="text-gray-300 hover:text-cyan-400 transition-colors duration-300">Philosophy</a>
+                <a href="contact/index.html" class="text-gray-300 hover:text-cyan-400 transition-colors duration-300">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="about/index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">About</a>
+                <a href="expertise/index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Expertise</a>
+                <a href="projects/index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Projects</a>
+                <a href="insights/index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Insights</a>
+                <a href="philosophy/index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Philosophy</a>
+                <a href="contact/index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative isolate overflow-hidden pt-24 pb-32 sm:pt-32 sm:pb-40">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl">
+                    <h1 class="text-4xl font-black text-white sm:text-6xl lg:text-7xl tracking-tighter leading-tight">
+                        本質を極める<br><span class="text-gradient">ミニマリスト・ウェルネス</span>
+                    </h1>
+                    <p class="mt-6 text-lg sm:text-xl leading-8 text-gray-300 max-w-2xl">
+                        心身の調和と深い体験を追求し、豊かな未来をデザインする探求者。モノと情報に縛られない生き方から、持続可能な豊かさの核心に迫ります。
+                    </p>
+                    <div class="mt-10 flex items-center gap-x-6">
+                        <a href="projects/index.html" class="cta-button">プロジェクトを見る</a>
+                        <a href="about/index.html" class="text-base font-semibold leading-6 text-gray-200 hover:text-cyan-400 transition-colors">私について <span aria-hidden="true">→</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
+                <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#06b6d4] to-[#67e8f9] opacity-20 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+            </div>
+        </section>
+
+        <!-- About Intro Section -->
+        <section class="py-20 sm:py-28 bg-gray-900">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center">
+                    <div>
+                        <h2 class="section-title">ミニマリズムとウェルネスが拓く、<br>持続可能な豊かさの追求</h2>
+                        <p class="mt-6 text-lg leading-8 text-gray-400">
+                            私の探求は「モノに縛られず、心身を整えることで、本質的な価値と深い体験を探求し、その豊かさを伝える」というミッションに集約されます。過剰な所有と情報から距離を置き、生まれた「余白」にこそ、創造性、平穏、そして真の充足が宿ると信じています。この旅路で得た知見と実践が、私の全ての活動の基盤です。
+                        </p>
+                        <div class="mt-8">
+                            <a href="about/index.html" class="cta-button">探求の旅路を知る</a>
+                        </div>
+                    </div>
+                    <div class="mt-12 lg:mt-0">
+                         <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden bg-gray-800 shadow-xl">
+                            <!-- ここに画像やビデオを配置できます。例としてSVGパターンを配置 -->
+                            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="p" width="100" height="100" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path id="a" data-color="outline" fill="none" stroke="#22d3ee" stroke-width="3" d="M0 0l50 50m0-50L0 50"></path></pattern></defs><rect fill="#1f2937" width="100%" height="100%"></rect><rect fill="url(#p)" width="100%" height="100%" opacity="0.1"></rect></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expertise Section -->
+        <section class="py-20 sm:py-28">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="section-title">私の専門性：本質を見極め、未来を共創する4つの領域</h2>
+                <p class="section-subtitle max-w-3xl mx-auto">各領域が有機的に連動し、個人と組織の本質的な価値創造を支援します。</p>
+                <div class="mt-16 grid grid-cols-1 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 sm:gap-x-8 text-left">
+                    <div class="p-6 bg-gray-800/50 rounded-lg">
+                        <div class="flex-shrink-0">
+                            <svg class="h-10 w-10 text-cyan-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" /></svg>
+                        </div>
+                        <h3 class="mt-4 text-xl font-semibold text-white">ミニマリスト的ライフスタイルデザイン</h3>
+                        <p class="mt-2 text-gray-400">空間と思考を最適化し、本質的な豊かさを創出。物理的・精神的な「ノイズ」を排し、集中力と創造性を最大化します。</p>
+                    </div>
+                    <div class="p-6 bg-gray-800/50 rounded-lg">
+                        <div class="flex-shrink-0">
+                           <svg class="h-10 w-10 text-cyan-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>
+                        </div>
+                        <h3 class="mt-4 text-xl font-semibold text-white">セルフウェルネス実践</h3>
+                        <p class="mt-2 text-gray-400">心身の調和を育む、実践的で持続可能なアプローチ。ヨガ・瞑想・食育を統合し、内なる平穏と活力を引き出します。</p>
+                    </div>
+                    <div class="p-6 bg-gray-800/50 rounded-lg">
+                        <div class="flex-shrink-0">
+                            <svg class="h-10 w-10 text-cyan-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M14.25 6.087c0-.595.484-1.08 1.08-1.08h.36c.665 0 1.298-.168 1.84-.468a12.02 12.02 0 016 6.51c.394.96.446 2.046.158 3.061a12.02 12.02 0 01-6.574 6.068c-.96.394-2.046.446-3.06.158a12.02 12.02 0 01-6.068-6.574c-.288-1.015-.236-2.102.158-3.06a12.02 12.02 0 016.51-6.002z" /><path stroke-linecap="round" stroke-linejoin="round" d="M6.613 6.613a11.978 11.978 0 015.654-2.128m-2.128 5.654a11.978 11.978 0 01-5.654-2.128m2.128 5.654a11.954 11.954 0 00-5.654 2.128 11.978 11.978 0 002.128 5.654m-2.128-5.654a11.978 11.978 0 002.128 5.654m-2.128-5.654l5.654-2.128" /></svg>
+                        </div>
+                        <h3 class="mt-4 text-xl font-semibold text-white">サブカルチャー・キュレーション</h3>
+                        <p class="mt-2 text-gray-400">映画・音楽・ゲーム等の文化現象から、現代社会と人間の本質を洞察。複雑な事象を読み解き、新たな視点を提供します。</p>
+                    </div>
+                    <div class="p-6 bg-gray-800/50 rounded-lg">
+                        <div class="flex-shrink-0">
+                           <svg class="h-10 w-10 text-cyan-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" /></svg>
+                        </div>
+                        <h3 class="mt-4 text-xl font-semibold text-white">デジタルコンテンツ活用術</h3>
+                        <p class="mt-2 text-gray-400">情報の海を羅針盤に変え、創造性と生産性を最大化。デジタルミニマリズムに基づき、最適なツールとワークフローを設計します。</p>
+                    </div>
+                </div>
+                <div class="mt-16">
+                     <a href="expertise/index.html" class="cta-button">専門性の詳細を見る</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="py-20 sm:py-28 bg-gray-800/30">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl">
+                    <h2 class="section-title">実践と変革の記録：本質を形にした主要プロジェクト</h2>
+                    <p class="section-subtitle">哲学を具体的な価値へと昇華させた、代表的なプロジェクトをご紹介します。</p>
+                </div>
+                <div class="mt-16 grid grid-cols-1 gap-y-12 lg:grid-cols-2 lg:gap-x-12">
+                    <div class="group relative">
+                        <div class="relative w-full h-80 bg-gray-800 rounded-lg overflow-hidden group-hover:opacity-75 transition-opacity sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+                           <!-- Placeholder Image -->
+                           <div class="w-full h-full bg-cyan-900/50 flex items-center justify-center">
+                              <svg class="w-16 h-16 text-cyan-500 opacity-50" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18h16.5a2.25 2.25 0 012.25 2.25v11.25a2.25 2.25 0 01-2.25 2.25H6.75a2.25 2.25 0 01-2.25-2.25V6.75a2.25 2.25 0 012.25-2.25Z" /></svg>
+                           </div>
+                        </div>
+                        <h3 class="mt-6 text-lg font-semibold text-white">
+                            <a href="projects/index.html">
+                                <span class="absolute inset-0 z-10"></span>
+                                スモールビジネス向けデジタルワークフロー最適化支援
+                            </a>
+                        </h3>
+                        <p class="mt-1 text-sm text-gray-400">デジタルミニマリズム思想に基づき、情報過多による生産性低下を解決。Notion導入とワークフロー再設計で業務効率を30%改善。</p>
+                        <p class="mt-2 text-sm font-semibold text-cyan-400">デジタルコンテンツ活用術</p>
+                    </div>
+                     <div class="group relative">
+                        <div class="relative w-full h-80 bg-gray-800 rounded-lg overflow-hidden group-hover:opacity-75 transition-opacity sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+                           <!-- Placeholder Image -->
+                           <div class="w-full h-full bg-cyan-900/50 flex items-center justify-center">
+                               <svg class="w-16 h-16 text-cyan-500 opacity-50" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m-7.5-2.962a3.752 3.752 0 01-4.498-1.594M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                           </div>
+                        </div>
+                        <h3 class="mt-6 text-lg font-semibold text-white">
+                            <a href="projects/index.html">
+                                <span class="absolute inset-0 z-10"></span>
+                                企業向けストレスマネジメントプログラム開発
+                            </a>
+                        </h3>
+                        <p class="mt-1 text-sm text-gray-400">ヨガ・瞑想・食育を統合したホリスティックなプログラムを設計。参加者のストレスレベルを平均25%低減し、組織の生産性向上に貢献。</p>
+                        <p class="mt-2 text-sm font-semibold text-cyan-400">セルフウェルネス実践</p>
+                    </div>
+                </div>
+                <div class="mt-12 text-center">
+                    <a href="projects/index.html" class="cta-button">全てのプロジェクトを見る</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Insights Section -->
+        <section class="py-20 sm:py-28">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl">
+                    <h2 class="section-title">深淵なる考察と発見：本質への問いから生まれる知の探求</h2>
+                    <p class="section-subtitle">私の探求の過程で得られた思考の断片や、未来への示唆を共有します。</p>
+                </div>
+                <div class="mt-16 grid gap-16 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
+                    <article class="flex flex-col items-start justify-between">
+                      <div class="relative w-full">
+                        <div class="relative w-full h-48 bg-gray-800 rounded-lg overflow-hidden"></div>
+                        <div class="absolute inset-0 rounded-lg ring-1 ring-inset ring-gray-700"></div>
+                      </div>
+                      <div class="max-w-xl">
+                        <div class="mt-8 flex items-center gap-x-4 text-xs">
+                          <time datetime="2023-10-21" class="text-gray-400">2023.10.21</time>
+                          <span class="relative z-10 rounded-full bg-gray-700 px-3 py-1.5 font-medium text-cyan-400">デジタルミニマリズム</span>
+                        </div>
+                        <div class="group relative">
+                          <h3 class="mt-3 text-lg font-semibold leading-6 text-white group-hover:text-gray-300">
+                            <a href="insights/index.html">
+                              <span class="absolute inset-0"></span>
+                              デジタルミニマリズムが拓く、創造的余白の創出法
+                            </a>
+                          </h3>
+                          <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-400">情報摂取の最適化からツールの選択基準まで、デジタル環境が心身に与える影響を論じ、真に価値ある情報に集中するための方法論を提示します。</p>
+                        </div>
+                      </div>
+                    </article>
+                    <article class="flex flex-col items-start justify-between">
+                      <div class="relative w-full">
+                        <div class="relative w-full h-48 bg-gray-800 rounded-lg overflow-hidden"></div>
+                        <div class="absolute inset-0 rounded-lg ring-1 ring-inset ring-gray-700"></div>
+                      </div>
+                      <div class="max-w-xl">
+                        <div class="mt-8 flex items-center gap-x-4 text-xs">
+                          <time datetime="2023-09-15" class="text-gray-400">2023.09.15</time>
+                          <span class="relative z-10 rounded-full bg-gray-700 px-3 py-1.5 font-medium text-cyan-400">ウェルネス</span>
+                        </div>
+                        <div class="group relative">
+                          <h3 class="mt-3 text-lg font-semibold leading-6 text-white group-hover:text-gray-300">
+                            <a href="insights/index.html">
+                              <span class="absolute inset-0"></span>
+                              行動変容と持続可能な習慣形成：ミニマリスト習慣の心理学的考察
+                            </a>
+                          </h3>
+                          <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-400">なぜ良い習慣は続かないのか？行動経済学の知見を援用し、ミニマリズムやウェルネス実践を無理なく持続させるための心理的アプローチを解説します。</p>
+                        </div>
+                      </div>
+                    </article>
+                    <article class="flex flex-col items-start justify-between">
+                      <div class="relative w-full">
+                        <div class="relative w-full h-48 bg-gray-800 rounded-lg overflow-hidden"></div>
+                        <div class="absolute inset-0 rounded-lg ring-1 ring-inset ring-gray-700"></div>
+                      </div>
+                      <div class="max-w-xl">
+                        <div class="mt-8 flex items-center gap-x-4 text-xs">
+                          <time datetime="2023-08-01" class="text-gray-400">2023.08.01</time>
+                          <span class="relative z-10 rounded-full bg-gray-700 px-3 py-1.5 font-medium text-cyan-400">サブカルチャー</span>
+                        </div>
+                        <div class="group relative">
+                          <h3 class="mt-3 text-lg font-semibold leading-6 text-white group-hover:text-gray-300">
+                            <a href="insights/index.html">
+                              <span class="absolute inset-0"></span>
+                              サブカルチャーに潜む哲学：「ブレードランナー」が問いかける人間性の本質
+                            </a>
+                          </h3>
+                          <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-400">名作SF映画を題材に、その深層にある哲学的問いや現代社会への示唆を読み解きます。文化作品から得られる洞察の重要性を探ります。</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+                <div class="mt-16 text-center">
+                    <a href="insights/index.html" class="cta-button">全てのインサイトを読む</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Philosophy Section -->
+        <section class="py-20 sm:py-28 relative isolate overflow-hidden">
+             <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="section-title">なぜ、本質を極めるのか</h2>
+                <p class="section-subtitle max-w-3xl mx-auto">私の活動の根底には、ミニマリズム、ウェルネス、そして深い体験の追求という哲学があります。それは単なるライフスタイルではなく、世界を理解し、自己と向き合うための羅針盤です。</p>
+                <div class="mt-10">
+                    <a href="philosophy/index.html" class="cta-button">私の哲学を読む</a>
+                </div>
+            </div>
+            <div class="absolute inset-x-0 bottom-0 -z-10 transform-gpu overflow-hidden blur-3xl" aria-hidden="true">
+                <div class="relative left-1/2 -translate-x-1/2 aspect-[1155/678] w-[36.125rem] bg-gradient-to-tr from-[#06b6d4] to-[#67e8f9] opacity-10 sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="bg-gray-800/50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
+                <div class="mx-auto max-w-3xl text-center">
+                    <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">本質を追求する共鳴を求めて</h2>
+                    <p class="mx-auto mt-4 max-w-xl text-lg leading-8 text-gray-300">採用、協業、講演、取材のご依頼など、未来を共創する機会を心よりお待ちしています。あなたのビジョンや課題について、ぜひお聞かせください。</p>
+                    <div class="mt-10">
+                        <a href="contact/index.html" class="cta-button">お問い合わせはこちら</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+                <div class="space-y-4">
+                    <a href="index.html" class="text-2xl font-bold text-white tracking-wider">LOU-Ark</a>
+                    <p class="text-sm text-gray-400">本質を極めるミニマリスト・ウェルネス</p>
+                    <div class="flex space-x-6">
+                        <!-- Social Media Links (Dummy) -->
+                        <a href="#" class="text-gray-500 hover:text-gray-400">
+                            <span class="sr-only">X (Twitter)</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-gray-400">
+                            <span class="sr-only">LinkedIn</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-semibold leading-6 text-gray-200">ナビゲーション</h3>
+                            <ul role="list" class="mt-6 space-y-4">
+                                <li><a href="about/index.html" class="text-sm leading-6 text-gray-400 hover:text-white">About</a></li>
+                                <li><a href="expertise/index.html" class="text-sm leading-6 text-gray-400 hover:text-white">Expertise</a></li>
+                                <li><a href="projects/index.html" class="text-sm leading-6 text-gray-400 hover:text-white">Projects</a></li>
+                            </ul>
+                        </div>
+                        <div class="mt-10 md:mt-0">
+                            <h3 class="text-sm font-semibold leading-6 text-gray-200" style="visibility: hidden;">&nbsp;</h3>
+                            <ul role="list" class="mt-6 space-y-4">
+                                <li><a href="insights/index.html" class="text-sm leading-6 text-gray-400 hover:text-white">Insights</a></li>
+                                <li><a href="philosophy/index.html" class="text-sm leading-6 text-gray-400 hover:text-white">Philosophy</a></li>
+                                <li><a href="contact/index.html" class="text-sm leading-6 text-gray-400 hover:text-white">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:grid md:grid-cols-1 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-semibold leading-6 text-gray-200">法務</h3>
+                            <ul role="list" class="mt-6 space-y-4">
+                                <li><a href="legal/privacy-policy/index.html" class="text-sm leading-6 text-gray-400 hover:text-white">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-16 border-t border-gray-800 pt-8 sm:mt-20 lg:mt-24">
+                <p class="text-sm leading-5 text-gray-500">&copy; 2024 LOU-Ark Portfolio. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            var menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

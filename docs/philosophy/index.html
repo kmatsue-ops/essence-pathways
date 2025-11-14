@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philosophy | LOU-Ark Portfolio</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans JP', 'sans-serif'],
+                    },
+                    colors: {
+                        'background': '#fdfdfd',
+                        'text-primary': '#1f2937',
+                        'text-secondary': '#4b5563',
+                        'accent': {
+                            'light': '#67e8f9',
+                            'DEFAULT': '#0891b2',
+                            'dark': '#155e75'
+                        },
+                    },
+                    animation: {
+                        'fade-in-up': 'fade-in-up 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        'fade-in-up': {
+                            '0%': {
+                                opacity: '0',
+                                transform: 'translateY(20px)'
+                            },
+                            '100%': {
+                                opacity: '1',
+                                transform: 'translateY(0)'
+                            },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .animate-on-scroll {
+            opacity: 0;
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            transform: translateY(20px);
+        }
+        .is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="bg-background font-sans text-text-primary antialiased">
+
+    <!-- Header -->
+    <header class="bg-background/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200" x-data="{ mobileMenuOpen: false }">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="../index.html" class="text-2xl font-bold text-accent-dark hover:text-accent transition-colors duration-300">
+                        LOU-Ark
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="../index.html" class="text-base font-medium text-text-secondary hover:text-accent transition-colors duration-300">Home</a>
+                    <a href="../about/index.html" class="text-base font-medium text-text-secondary hover:text-accent transition-colors duration-300">About</a>
+                    <a href="../expertise/index.html" class="text-base font-medium text-text-secondary hover:text-accent transition-colors duration-300">Expertise</a>
+                    <a href="../projects/index.html" class="text-base font-medium text-text-secondary hover:text-accent transition-colors duration-300">Projects</a>
+                    <a href="../insights/index.html" class="text-base font-medium text-text-secondary hover:text-accent transition-colors duration-300">Insights</a>
+                    <a href="index.html" class="text-base font-medium text-accent hover:text-accent-dark transition-colors duration-300" aria-current="page">Philosophy</a>
+                    <a href="../contact/index.html" class="text-base font-medium text-text-secondary hover:text-accent transition-colors duration-300">Contact</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button @click="mobileMenuOpen = !mobileMenuOpen" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent">
+                        <span class="sr-only">メインメニューを開く</span>
+                        <svg x-show="!mobileMenuOpen" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                        <svg x-show="mobileMenuOpen" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div x-show="mobileMenuOpen" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-100" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95" class="md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="../index.html" class="block px-3 py-2 rounded-md text-base font-medium text-text-secondary hover:text-accent hover:bg-gray-50">Home</a>
+                <a href="../about/index.html" class="block px-3 py-2 rounded-md text-base font-medium text-text-secondary hover:text-accent hover:bg-gray-50">About</a>
+                <a href="../expertise/index.html" class="block px-3 py-2 rounded-md text-base font-medium text-text-secondary hover:text-accent hover:bg-gray-50">Expertise</a>
+                <a href="../projects/index.html" class="block px-3 py-2 rounded-md text-base font-medium text-text-secondary hover:text-accent hover:bg-gray-50">Projects</a>
+                <a href="../insights/index.html" class="block px-3 py-2 rounded-md text-base font-medium text-text-secondary hover:text-accent hover:bg-gray-50">Insights</a>
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium bg-accent-light text-accent-dark" aria-current="page">Philosophy</a>
+                <a href="../contact/index.html" class="block px-3 py-2 rounded-md text-base font-medium text-text-secondary hover:text-accent hover:bg-gray-50">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="py-24 sm:py-32 bg-gray-50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <p class="text-base font-semibold text-accent animate-fade-in-up" style="animation-delay: 0.1s;">MY CORE PRINCIPLES</p>
+                <h1 class="mt-2 text-4xl font-bold tracking-tight text-text-primary sm:text-6xl animate-fade-in-up" style="animation-delay: 0.2s;">私の根源をなす探求の哲学</h1>
+                <p class="mt-6 text-lg leading-8 text-text-secondary animate-fade-in-up" style="animation-delay: 0.3s;">
+                    なぜ、本質を極めるのか。なぜ、ミニマリズムとウェルネスなのか。私のすべての活動と思考の根底には、一貫した哲学が存在します。それは、モノや情報に縛られず、心身を深く整えることで、人生の真の豊かさを探求するための羅針盤です。
+                </p>
+            </div>
+        </section>
+
+        <!-- Core Philosophies Section -->
+        <div class="py-20 sm:py-28" x-data="{}" x-init="() => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+        }">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="space-y-20">
+
+                    <!-- 1. Minimalism: The Art of Creating Space -->
+                    <section class="animate-on-scroll grid md:grid-cols-5 gap-8 md:gap-12 items-center">
+                        <div class="md:col-span-2">
+                             <div class="aspect-w-1 aspect-h-1">
+                                <svg class="w-full h-full text-accent/10" fill="currentColor" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-40,0a64,64,0,1,0-64,64A64.07,64.07,0,0,0,192,128ZM128,88a40,40,0,1,0,40,40A40.05,40.05,0,0,0,128,88Z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="md:col-span-3">
+                            <h2 class="text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
+                                <span class="text-accent">01.</span> 余白の創造：ミニマリズムの本質
+                            </h2>
+                            <p class="mt-6 text-lg leading-relaxed text-text-secondary">
+                                私が追求するミニマリズムは、単に所有物を減らす行為ではありません。それは、思考、時間、人間関係における過剰なノイズを意識的に取り除き、本当に価値あるものに集中するための「知的ツール」です。物質的な豊かさではなく、精神的な自由と創造性を育む「余白」をデザインすること。それこそが、本質的な豊かさへの第一歩だと信じています。
+                            </p>
+                            <blockquote class="mt-6 border-l-4 border-accent pl-6 italic text-text-secondary">
+                                "Less, but better. ― より少なく、しかしより良く。" この原則は、私のデザイン思考からライフスタイルまで、すべてを貫く指針です。
+                            </blockquote>
+                        </div>
+                    </section>
+                    
+                    <!-- 2. Wellness: The Pursuit of Inner Harmony -->
+                    <section class="animate-on-scroll grid md:grid-cols-5 gap-8 md:gap-12 items-center">
+                         <div class="md:col-span-3 md:order-last">
+                            <h2 class="text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
+                                <span class="text-accent">02.</span> 内なる調和：ウェルネスへの探求
+                            </h2>
+                            <p class="mt-6 text-lg leading-relaxed text-text-secondary">
+                                ウェルネスとは、高価なサービスや製品を消費することではなく、自分自身の内側と向き合い、心身の調和を育むプロセスです。ヨガ、瞑想、そして食育の実践を通じて、私は身体の声に耳を傾け、精神の静けさを取り戻します。このホリスティックなアプローチは、ストレスの多い現代社会を生き抜くためのレジリエンス（回復力）を高め、クリアな思考と深い洞察の源泉となります。
+                            </p>
+                            <p class="mt-4 text-lg leading-relaxed text-text-secondary">
+                                心身が整うことで初めて、私たちは物事の本質を曇りなく見つめ、より良い選択をすることができるのです。
+                            </p>
+                        </div>
+                        <div class="md:col-span-2 md:order-first">
+                             <div class="aspect-w-1 aspect-h-1">
+                                <svg class="w-full h-full text-accent/10" fill="currentColor" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M228.4,103.23,156,132,128,204,99.93,132.05,28,103.24,99.92,74.77,128,4,156.09,74.78ZM228,200a28,28,0,1,1-28-28A28,28,0,0,1,228,200Z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 3. Deep Experience: The Journey into the Abyss -->
+                    <section class="animate-on-scroll grid md:grid-cols-5 gap-8 md:gap-12 items-center">
+                        <div class="md:col-span-2">
+                            <div class="aspect-w-1 aspect-h-1">
+                                <svg class="w-full h-full text-accent/10" fill="currentColor" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M247.31,124.76,132.76,10.21a8,8,0,0,0-13.52,0L4.69,124.76a8,8,0,0,0,0,9.48l114.55,114.55a8,8,0,0,0,13.52,0L247.31,134.24a8,8,0,0,0,0-9.48ZM128,223.51,24.49,120,128,16.49,231.51,120Zm0-35.07a40,40,0,1,1,40-40A40,40,0,0,1,128,188.44Zm0-64a24,24,0,1,0,24,24A24,24,0,0,0,128,124.44Z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="md:col-span-3">
+                            <h2 class="text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
+                                <span class="text-accent">03.</span> 深淵への旅：深い体験の追求
+                            </h2>
+                            <p class="mt-6 text-lg leading-relaxed text-text-secondary">
+                                情報の洪水が日常を覆う現代において、私は「浅い体験」の連続から意識的に距離を置きます。サブカルチャー作品のキュレーションは、そのための重要な実践です。一つの物語を深く読み解き、その背後にある哲学的問いや社会への洞察を探る行為は、受動的な消費ではなく、能動的な知の探求です。このプロセスは、五感を研ぎ澄まし、世界を多角的に捉える視点を養い、人生に奥行きと意味をもたらしてくれます。
+                            </p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <!-- Integration Section -->
+        <section class="bg-gray-50 py-20 sm:py-28">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">三位一体の哲学：その相互作用</h2>
+                    <p class="mt-6 max-w-2xl mx-auto text-lg leading-8 text-text-secondary">
+                        これら3つの哲学は独立して存在するのではなく、互いに影響し合い、強固な一つの思想体系を形成しています。
+                    </p>
+                </div>
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+                    <div class="animate-on-scroll">
+                        <h3 class="text-xl font-semibold text-text-primary">ミニマリズムが土台を築く</h3>
+                        <p class="mt-2 text-base leading-7 text-text-secondary">物理的・精神的な余白を生み出し、ウェルネスと深い体験に没頭するための時間とエネルギーを確保します。</p>
+                    </div>
+                    <div class="animate-on-scroll" style="animation-delay: 0.1s;">
+                        <h3 class="text-xl font-semibold text-text-primary">ウェルネスが感性を研ぎ澄ます</h3>
+                        <p class="mt-2 text-base leading-7 text-text-secondary">整えられた心身は、より繊細に物事を捉えることを可能にし、深い体験から得られる学びと感動を最大化します。</p>
+                    </div>
+                    <div class="animate-on-scroll" style="animation-delay: 0.2s;">
+                        <h3 class="text-xl font-semibold text-text-primary">深い体験が人生を豊かにする</h3>
+                        <p class="mt-2 text-base leading-7 text-text-secondary">得られた洞察や感動は、再びミニマリズムとウェルネスの実践へとフィードバックされ、人生の豊かさを螺旋状に高めていきます。</p>
+                    </div>
+                </div>
+                <p class="mt-16 text-center text-lg leading-8 text-text-secondary">
+                    この統合された哲学こそが、私のすべてのプロジェクト、考察、そして生き方そのものの基盤となっています。
+                </p>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 sm:py-28">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">哲学の実践を見る</h2>
+                <p class="mt-4 text-lg leading-8 text-text-secondary">
+                    私の哲学がどのように具体的な形となって現れているか、ぜひご覧ください。
+                </p>
+                <div class="mt-10 flex items-center justify-center gap-x-6">
+                    <a href="../projects/index.html" class="rounded-md bg-accent px-5 py-3 text-base font-semibold text-white shadow-sm hover:bg-accent-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent transition-colors duration-300">
+                        Projectsを見る
+                    </a>
+                    <a href="../insights/index.html" class="text-base font-semibold leading-6 text-text-primary hover:text-accent transition-colors duration-300">
+                        Insightsを読む <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 border-t border-gray-200" aria-labelledby="footer-heading">
+        <h2 id="footer-heading" class="sr-only">フッター</h2>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+                <div class="space-y-8 xl:col-span-1">
+                    <a href="../index.html" class="text-2xl font-bold text-accent-dark hover:text-accent transition-colors duration-300">
+                        LOU-Ark
+                    </a>
+                    <p class="text-text-secondary text-base">
+                        本質を極めるミニマリスト・ウェルネス：心身の調和と深い体験の追求
+                    </p>
+                </div>
+                <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-semibold text-gray-500 tracking-wider uppercase">Menu</h3>
+                            <ul role="list" class="mt-4 space-y-4">
+                                <li><a href="../about/index.html" class="text-base text-text-secondary hover:text-accent">About</a></li>
+                                <li><a href="../expertise/index.html" class="text-base text-text-secondary hover:text-accent">Expertise</a></li>
+                                <li><a href="../projects/index.html" class="text-base text-text-secondary hover:text-accent">Projects</a></li>
+                            </ul>
+                        </div>
+                        <div class="mt-12 md:mt-0">
+                            <h3 class="text-sm font-semibold text-gray-500 tracking-wider uppercase">Explore</h3>
+                            <ul role="list" class="mt-4 space-y-4">
+                                <li><a href="../insights/index.html" class="text-base text-text-secondary hover:text-accent">Insights</a></li>
+                                <li><a href="index.html" class="text-base text-text-secondary hover:text-accent">Philosophy</a></li>
+                                <li><a href="../contact/index.html" class="text-base text-text-secondary hover:text-accent">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:grid md:grid-cols-1 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-semibold text-gray-500 tracking-wider uppercase">Legal</h3>
+                            <ul role="list" class="mt-4 space-y-4">
+                                <li><a href="../legal/privacy-policy/index.html" class="text-base text-text-secondary hover:text-accent">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-200 pt-8">
+                <p class="text-base text-text-secondary text-center">&copy; 2024 LOU-Ark Portfolio. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
